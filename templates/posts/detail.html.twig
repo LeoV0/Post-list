@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostsController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+<h1>Liste des posts</h1>
+<ul class="list-group">
+<li class="list-group-item">
+<h3>{{post.titre}}</h3>
+<p>{{post.contenu}}</p>
+<a href="{{ path('modif_post', {'id':post.id}) }}" class="btn btn-primary">Modifier</a>
+<a href="{{ path ('app_posts')}}" class="btn btn-secondary">Retour</a>
+</li>
+</ul>
+</div>
+
+{% endblock %}

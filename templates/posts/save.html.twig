@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostsController!{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1> Ajouter un post </h1>
+{{ form_start(form) }}
+{{ form_row(form.titre) }}
+{{ form_row(form.contenu) }}
+{{ form_end(form) }}
+</div>
+
+{% endblock %}

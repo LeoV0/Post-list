@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostsController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+<a href="{{ path('add_posts') }}" class="btn btn-success float-end">Ajouter un post</a>
+<h1>Liste des posts</h1>
+<ul class="list-group">
+{% for post in posts %}
+<li class="list-group-item">
+<h3>{{post.titre}}</h3>
+<p>{{post.contenu}}</p>
+<a href="{{ path('detail_post', {'id':post.id}) }}" class="btn btn-primary">Détail</a>
+<a href="{{ path('delete_post', {'id': post.id}) }}" class="btn btn-danger">Supprimer</a>
+</li>
+{% endfor %}
+</ul>
+
+</div>
+
+{% endblock %}
